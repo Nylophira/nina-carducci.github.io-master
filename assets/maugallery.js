@@ -119,6 +119,7 @@
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -150,7 +151,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          //ajout d'un moins 1 :
+          index = i-1 ;
         }
       });
       next =
@@ -158,6 +160,7 @@
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -189,7 +192,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          //rajout d'un plus 1
+          index = i+1;
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -240,7 +244,8 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+      //Debug : rajout de la classe "active"
+      $(this).addClass("active active-tag");
 
       var tag = $(this).data("images-toggle");
 
