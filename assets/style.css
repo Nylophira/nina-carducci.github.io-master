@@ -40,6 +40,7 @@ body {
 
 .social-link img {
 	width: 20px;
+	height: 20px;
 }
 
 #about {
@@ -67,8 +68,10 @@ body {
 	z-index: 0;
 }
 
+/* rajout de la hauteur */
 .picture img {
 	width: 100%;
+	height: 100%;
 
 }
 #about-me {
@@ -199,11 +202,6 @@ body {
 	display: flex;
 }
 
-/* rajout width et height  */
-.picture {
-	width: 100%;
-	height: 100%;
-}
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -258,7 +256,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h4, #about-me p {
 		width: 100%;
 	}
 }
